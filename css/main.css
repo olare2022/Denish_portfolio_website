@@ -1,0 +1,362 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+
+body {
+  line-height: 1.5;
+  min-height: 100vh;
+}
+
+img,
+picture {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Style page content */
+.main {
+  margin-left: 160px; /* Same as the width of the sidebar */
+  padding: 0;
+    
+}
+
+/* Home section*/
+.home {
+  height: 600px;
+  background-color: black;
+}
+.hello {
+  padding-top: 100px;
+  text-align: center;
+  font-size: 40px;
+  font-weight: lighter;
+  color: red;
+  font-family: 'Tangerine', serif;
+}
+.mytxt1 {
+  text-align: center;
+  font-size: 50px;
+  font-weight: 1000;
+  color: white;
+  text-shadow: 3px 3px black;
+}
+.mytxt1:hover {
+  color: #f02c2c;
+  transition: 4s;
+  transition-delay: 0.2s;
+}
+.home p {
+  text-align: center;
+  font-size: 25px;
+  font-weight: bolder;
+  color: red;
+  text-shadow: 2px 2px black;
+  padding-bottom: 300px;
+}
+/* end */
+
+/* About Section*/
+.abt {
+  background-color: black;
+  height: 100%;
+  color: white;
+}
+.abt1 {
+  padding-top: 10px;
+  text-align: center;
+}
+.abt1 h1 {
+  font-size: 30px;
+  font-weight: bolder;
+}
+.abt1 p {
+  font-size: 20px;
+}
+.abt2 {
+  font-size: 18px;
+  padding: 0 20px;
+}
+.quotes {
+  text-align: right;
+  font-size: 16px;
+  padding-right: 20px;
+}
+.column-image {
+  float: left;
+  width: 40%;
+  padding-left: 20px;
+  padding-bottom: 20px;
+}
+.card-img {
+  width:  100%;
+  height: auto;
+}
+
+.mypic img {
+  border-radius: 5%;
+}
+.column-content {
+  float: right;
+  width: 60%;
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+}
+.card-content {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 30px;
+  color: white;
+  height: auto;
+  border-radius: 10%;
+}
+.card-content:hover {
+  background-color: #383737;
+  transition: 2s;
+  transition-delay: 0.1s;
+}
+.row-abt {
+  content: "";
+  display: table;
+  clear: both;
+}
+button {
+  padding: 10px;
+  font-size: larger;
+  font-weight: bolder;
+  background-color: #f02c2c;
+  border: 5%;
+}
+
+@media screen and (max-width: 700px) {
+  .column-image, .card-content {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+/* End */
+
+/* skills section*/
+#skills {
+  height: auto;
+}
+#skills h2 {
+  font-size: 30px;
+  font-weight: bolder;
+  text-align: center;
+  padding-top: 25px;
+}
+#skills p {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 40px;
+  color: white;
+}
+.column-skill-a {
+  width: 50%;
+  float:left;
+}
+.card-skill-a {
+  background-color: black;
+  padding: 10px;
+}
+.column-skill-b {
+  width: 50%;
+  float: right;
+}
+.card-skill-b {
+  background-color: black;
+  padding: 10px;
+}
+.row-skills:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* Container for skill bars */
+.container {
+  width: 100%; /* Full width */
+  background-color: #ddd;
+}
+
+.skills {
+  text-align: right;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  color: white;
+}
+
+.comp {width: 95%; background-color: red;}
+.css {width: 90%; background-color: red;}
+.js {width: 50%; background-color: red;}
+.python {width: 85%; background-color: red;}
+.c {width: 60%; background-color: red;}
+.server {width: 85%; background-color: red;}
+.git {width: 90%; background-color: red;}
+.db {width: 70%; background-color: red;}
+.illustrator {width: 90%; background-color: red;}
+.photoshop {width: 70%; background-color: red;}
+
+/* end skills section */
+
+/* service */
+/*.services {
+  background-color: black;
+}
+.card-s h3 {
+  text-align: center;
+  font-size: 30px;
+}
+
+.column-s {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+}
+.services {margin: 0 -5px;}
+
+.services:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.card-s {
+  box-shadow: 0 4px 8px 0 rgb(252, 252, 252); /* this adds the "card" effect *
+  padding: 30px;
+  text-align: center;
+  background-color: #353636;
+  border-radius: 5%;
+}
+.card-s:hover {
+  background-color: grey;
+  transition: 2s;
+  transition-delay: 0.1s;
+}
+
+#card-s1, #card-s2 {
+  height: 500px;
+}
+.card-s li {
+  text-align: justify;
+  list-style-type: armenian;
+}
+
+@media screen and (max-width: 600px) {
+  .column-s {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}*/
+/* END services */
+
+/* contact section*/
+.contact {
+  height: 100%;
+  background-color: black;
+}
+.me {
+  font-size: 40px;
+  font-weight: bolder;
+  text-align: center;
+  padding-top: 30px;
+  color: red;
+  font-family: 'Courier New', Courier, monospace;
+}
+.column1 {
+  float: left;
+  width: 50%;
+  text-align: center;
+}
+.card-column1{
+  padding: 10px;
+}
+.column2 {
+  float: right;
+  width: 50%;
+  padding-right: 50px;
+  padding-left: 20px;
+  padding-bottom: 20px;
+}
+/*.card-column2:hover {
+  color: #0b6312;
+  transition: 2s;
+  transition-delay: 0.4s;
+}*/
+.row-contact:after {
+  content: "";
+  display: table;
+  clear: both;
+
+}
+
+/* Style inputs */
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #ccc;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+  border-radius: 4%;
+}
+
+input[type=submit] {
+  background-color: rgb(228, 30, 30);
+  color: white;
+  font-size: larger;
+  font-weight: bolder;
+  padding: 12px 20px;
+  border: 2px solid grey;
+  cursor: pointer;
+  border-radius: 4%;
+}
+
+input[type=submit]:hover {
+  background-color: black;
+  transition: 2s;
+  transition-delay: 0.3s;
+}
+
+/* Style the container/contact section */
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 10px;
+}
+
+@media screen and (max-width: 600px) {
+  .column1, .column2, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+/* get in touch styles*/
+.info {
+  float: right;
+  width: 70%;
+}
+
+._title {
+  text-align: left;
+  padding-top: 25px;
+  font-weight: bold;
+  color: white;
+  font-size: 20px;
+}
+.sub_title {
+  text-align: left;
+  font-weight: lighter;
+  color: white;
+  font-size: 18px;
+}
+/* end contact section */

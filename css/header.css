@@ -1,0 +1,42 @@
+header {
+    padding-bottom: 5px;
+    font-weight: bolder;
+    /*background-color: rgb(46, 44, 44);*/
+    background-image: url('/images/pc.jpeg');
+    opacity: 0.6;
+}
+.brand {
+    font-size: 50px;
+    padding-top: 10px;
+    padding-left: 170px;
+    color: red;
+    font-family: 'Tangerine', serif;
+    text-shadow: 2px 3px 2px white;
+}
+.brand:hover {
+  color: white;
+  text-shadow: 2px 3px 2px red;
+  transition: 2s;
+  transition-delay: 00.1s;
+}
+
+/* The sticky class is added to the header with JS when it reaches its scroll position */
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%
+  }
+  
+  /* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
+  .sticky + .content {
+    padding-top: 102px;
+  }
+
+  @media screen and (max-width: 700px) {
+    header {
+      width: 100%;
+      height: auto;
+      position: relative;
+    }
+    header .brand {float:left}
+  }
