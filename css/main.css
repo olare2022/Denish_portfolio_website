@@ -30,7 +30,7 @@ picture {
 /* Home section*/
 .home {
   height: 600px;
-  background-color: black;
+  background-color: rgba(135,20,140,0.7);
 }
 .hello {
   padding-top: 100px;
