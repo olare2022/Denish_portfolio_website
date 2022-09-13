@@ -1,42 +1,75 @@
-header {
-    padding-bottom: 5px;
-    font-weight: bolder;
-    /*background-color: rgb(46, 44, 44);*/
-    background-image: url('/images/pc.jpeg');
-    opacity: 0.6;
-}
-.brand {
-    font-size: 50px;
-    padding-top: 10px;
-    padding-left: 170px;
-    color: red;
-    font-family: 'Tangerine', serif;
-    text-shadow: 2px 3px 2px white;
-}
-.brand:hover {
-  color: white;
-  text-shadow: 2px 3px 2px red;
-  transition: 2s;
-  transition-delay: 00.1s;
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 300px;
+  transition: all ease-in-out 0.5s;
+  z-index: 9997;
+  transition: all 0.5s;
+  padding: 0 15px;
+  background: #040b14;
+  overflow-y: auto;
 }
 
-/* The sticky class is added to the header with JS when it reaches its scroll position */
-.sticky {
-    position: fixed;
-    top: 0;
-    width: 100%
-  }
-  
-  /* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
-  .sticky + .content {
-    padding-top: 102px;
+#header .profile img {
+  margin: 15px auto;
+  display: block;
+  width: 120px;
+  border: 8px solid #2c2f3f;
+}
+
+#header .profile h1 {
+  font-size: 24px;
+  margin: 0;
+  padding: 0;
+  font-weight: 600;
+  -moz-text-align-last: center;
+  text-align-last: center;
+  font-family: "Poppins", sans-serif;
+}
+
+#header .profile h1 a,
+#header .profile h1 a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+#header .profile .social-links a {
+  font-size: 18px;
+  display: inline-block;
+  background: #212431;
+  color: #fff;
+  line-height: 1;
+  padding: 8px 0;
+  margin-right: 4px;
+  border-radius: 50%;
+  text-align: center;
+  width: 36px;
+  height: 36px;
+  transition: 0.3s;
+}
+
+#header .profile .social-links a:hover {
+  background: #149ddd;
+  color: #fff;
+  text-decoration: none;
+}
+
+#main {
+  margin-left: 300px;
+}
+
+@media (max-width: 1199px) {
+  #header {
+    left: -300px;
   }
 
-  @media screen and (max-width: 700px) {
-    header {
-      width: 100%;
-      height: auto;
-      position: relative;
-    }
-    header .brand {float:left}
+  #main {
+    margin-left: 0;
   }
+}
