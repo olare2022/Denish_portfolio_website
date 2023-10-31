@@ -1,0 +1,65 @@
+.ftext {
+  background-color: black;
+  padding-bottom: 20px;
+}
+
+.connect {
+  text-align: center;
+}
+
+.connect li {
+  display: inline;
+}
+
+/* Style all font awesome icons */
+.fa {
+  padding: 20px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.fa:hover {
+  opacity: 0.7;
+  color: red;
+}
+
+/* Whatsapp */
+.fa-whatsapp {
+  color: white;
+}
+
+/* Twitter */
+.fa-twitter {
+  color: white;
+}
+
+/* Linkedin */
+.fa-linkedin {
+  color: white;
+}
+
+/* github */
+.fa-github {
+  color: white;
+}
+
+/* medium */
+.fa-medium {
+  color: white;
+}
+
+.foot_text {
+  text-align: center;
+  font-size: 14px;
+  color: white;
+  padding-top: 50px;
+}
+
+.foot_text a {
+  color: red;
+}
+
+.foot_text a:hover {
+  color: white;
+}
