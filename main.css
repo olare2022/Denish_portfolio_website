@@ -286,11 +286,11 @@ button {
   padding-left: 20px;
   padding-bottom: 20px;
 }
-/*.card-column2:hover {
+.card-column2:hover {
   color: #0b6312;
   transition: 2s;
   transition-delay: 0.4s;
-}*/
+}
 .row-contact:after {
   content: "";
   display: table;
