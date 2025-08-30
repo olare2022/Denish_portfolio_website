@@ -387,38 +387,46 @@
     }
     
     /* Footer */
-    footer {
-      background: var(--dark-bg);
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
-    
-    .connect ul {
-      list-style: none;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      margin-bottom: 15px;
-    }
-    
-    .connect li {
-      margin: 0 10px;
-    }
-    
-    .connect a {
-      color: white;
-      transition: color 0.3s;
-    }
-    
-    .connect a:hover {
-      color: var(--accent-color);
-    }
-    
-    .foot_text a {
-      color: var(--accent-color);
-      text-decoration: none;
-    }
+    .footer {
+  background: #111;
+  color: #fff;
+  text-align: center;
+  padding: 20px 10px;
+}
+
+.footer .social-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.footer .social-links a {
+  font-size: 28px;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.footer .social-links a:hover {
+  color: #1da1f2; /* Twitter blue or change based on brand */
+}
+
+.footer-text {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.footer-text a {
+  color: #1da1f2;
+  text-decoration: none;
+}
+
+.footer-text a:hover {
+  text-decoration: underline;
+}
+
     
     /* Responsive Design */
     @media screen and (max-width: 992px) {
