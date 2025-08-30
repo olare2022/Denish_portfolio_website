@@ -777,19 +777,49 @@
   </div>
 
     <!--footer section-->
-    <footer class="ftext">
-      <div class="connect">
-        <ul>
-          <li><a href="https://api.whatsapp.com/send?phone=254706511296" class="fa fa-whatsapp" style="font-size: 30px;" target="_blank"></a></li>
-          <li><a href="https://twitter.com/@mrOlare" class="fa fa-twitter" style="font-size: 30px;" target="_blank"></a></li>
-          <li><a href="https://www.linkedin.com/in/denish-odhiambo/" class="fa fa-linkedin" style="font-size: 30px;" target="_blank"></a></li>
-          <li><a href="https://github.com/olare2022" class="fa fa-github" style="font-size: 30px;" target="_blank"></a></li>
-          <li><a href="https://medium.com/@mrOlare" class="fa fa-medium" style="font-size: 30px;" target="_blank"></a></li>
-        </ul>
-      </div>
-      <div class="foot_text">
-        <p>Created By <a href="https://github.com/olare2022/" target="_blank">Denish Odhiambo</a> &copy; 2025 | All Rights Reserved.</p>
-      </div>
-    </footer>
+    <!-- Footer Section -->
+<footer class="footer">
+  <div class="social-links">
+    <ul>
+      <li>
+        <a href="https://api.whatsapp.com/send?phone=254706511296" 
+           class="fa fa-whatsapp" 
+           aria-label="WhatsApp" target="_blank"></a>
+      </li>
+      <li>
+        <a href="https://twitter.com/@mrOlare" 
+           class="fa fa-twitter" 
+           aria-label="Twitter" target="_blank"></a>
+      </li>
+      <li>
+        <a href="https://www.linkedin.com/in/denish-odhiambo/" 
+           class="fa fa-linkedin" 
+           aria-label="LinkedIn" target="_blank"></a>
+      </li>
+      <li>
+        <a href="https://github.com/olare2022" 
+           class="fa fa-github" 
+           aria-label="GitHub" target="_blank"></a>
+      </li>
+      <li>
+        <a href="https://medium.com/@mrOlare" 
+           class="fa fa-medium" 
+           aria-label="Medium" target="_blank"></a>
+      </li>
+    </ul>
+  </div>
+  <div class="footer-text">
+    <p>
+      Created By <a href="https://github.com/olare2022/" target="_blank">Denish Odhiambo</a> 
+      &copy; <span id="year"></span> | All Rights Reserved.
+    </p>
+  </div>
+</footer>
+
+<!-- Script to auto-update year -->
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
 </body>
 </html>
