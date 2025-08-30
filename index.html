@@ -5,20 +5,513 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  <link rel="stylesheet" href="main.css">
-  <link rel="stylesheet" href="footer.css">
-  <link rel="stylesheet" href="header.css">
-  <link rel="stylesheet" href="navbar.css">
-  <link rel="stylesheet" href="about.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
-  <title>Denish Olare Odhiambo</title>
-  <script src="index.js" defer></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+  <title>Denish Olare Odhiambo - Software Engineer</title>
+  <style>
+    :root {
+      --primary-color: #2b2b2b;
+      --secondary-color: #1a3365;
+      --accent-color: #025EAB;
+      --light-bg: #f8f9fa;
+      --dark-bg: #343a40;
+      --text-light: #f8f9fa;
+      --text-dark: #212529;
+    }
+    
+    body {
+      font-family: 'Montserrat', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: var(--light-bg);
+      color: var(--text-dark);
+      overflow-x: hidden;
+    }
+    
+    /* Header Styles */
+    .header {
+      padding: 15px 20px;
+      background: var(--secondary-color);
+      color: white;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    
+    .brand {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+    
+    /* Navigation Styles */
+    .mynavbar {
+      height: 100%;
+      width: 200px;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: var(--dark-bg);
+      overflow-x: hidden;
+      padding-top: 80px;
+      transition: 0.3s;
+      box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+    }
+    
+    .mynavbar img {
+      display: block;
+      margin: 0 auto 20px;
+      width: 120px;
+      height: 120px;
+      border: 4px solid var(--accent-color);
+    }
+    
+    .mynavbar a {
+      padding: 12px 8px 12px 16px;
+      text-decoration: none;
+      font-size: 14px;
+      color: var(--text-light);
+      display: block;
+      transition: 0.3s;
+      text-align: center;
+    }
+    
+    .mynavbar a:hover {
+      background-color: var(--accent-color);
+      color: white;
+    }
+    
+    .mynavbar a i {
+      font-size: 24px;
+      margin-bottom: 5px;
+    }
+    
+    /* Main Content */
+    .main {
+      margin-left: 200px;
+      padding: 80px 20px 20px;
+      transition: margin-left 0.3s;
+    }
+    
+    /* Home Section */
+    .home {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 40px 20px;
+      background: linear-gradient(135deg, var(--secondary-color) 0%, var(--accent-color) 100%);
+      color: white;
+      border-radius: 10px;
+      margin-bottom: 40px;
+    }
+    
+    .hello {
+      font-family: 'Tangerine', cursive;
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+    
+    .mytxt1 {
+      font-size: 3.5rem;
+      font-weight: bold;
+      margin: 10px 0;
+    }
+    
+    .mytxt2 {
+      color: #ffd700;
+    }
+    
+    .home p {
+      font-size: 1.5rem;
+      margin-top: 10px;
+    }
+    
+    /* About Section */
+    .abt {
+      padding: 40px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      margin-bottom: 40px;
+    }
+    
+    .abt h1 {
+      color: var(--secondary-color);
+      border-bottom: 2px solid var(--accent-color);
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+    }
+    
+    .quotes {
+      background: var(--light-bg);
+      padding: 20px;
+      border-left: 4px solid var(--accent-color);
+      margin: 20px 0;
+      font-style: italic;
+    }
+    
+    .row-abt {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 -15px;
+    }
+    
+    .column-content {
+      flex: 100%;
+      padding: 0 15px;
+    }
+    
+    .card-content {
+      background: var(--light-bg);
+      padding: 20px;
+      border-radius: 5px;
+    }
+    
+    .card-content button {
+      background: var(--accent-color);
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    
+    .card-content button:hover {
+      background: var(--secondary-color);
+    }
+    
+    /* Skills Section */
+    .skills {
+      padding: 40px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      margin-bottom: 40px;
+    }
+    
+    .skills h2 {
+      color: var(--secondary-color);
+      border-bottom: 2px solid var(--accent-color);
+      padding-bottom: 10px;
+      margin-bottom: 30px;
+    }
+    
+    .row-skills {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 -15px;
+    }
+    
+    .column-skill-a, .column-skill-b {
+      flex: 50%;
+      padding: 0 15px;
+    }
+    
+    .card-skill-a, .card-skill-b {
+      background: var(--light-bg);
+      padding: 20px;
+      border-radius: 5px;
+    }
+    
+    .container {
+      width: 100%;
+      background-color: #ddd;
+      border-radius: 20px;
+      margin: 10px 0 20px;
+    }
+    
+    .skills-bar {
+      text-align: right;
+      padding: 5px 10px;
+      color: white;
+      border-radius: 20px;
+    }
+    
+    .comp {width: 95%; background-color: var(--accent-color);}
+    .css {width: 90%; background-color: var(--accent-color);}
+    .js {width: 50%; background-color: var(--accent-color);}
+    .python {width: 85%; background-color: var(--accent-color);}
+    .c {width: 60%; background-color: var(--accent-color);}
+    .server {width: 85%; background-color: var(--accent-color);}
+    .git {width: 90%; background-color: var(--accent-color);}
+    .db {width: 70%; background-color: var(--accent-color);}
+    .illustrator {width: 90%; background-color: var(--accent-color);}
+    .photoshop {width: 70%; background-color: var(--accent-color);}
+    
+    /* Services Section */
+    .services {
+      padding: 40px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      margin-bottom: 40px;
+    }
+    
+    .services h2 {
+      color: var(--secondary-color);
+      border-bottom: 2px solid var(--accent-color);
+      padding-bottom: 10px;
+      margin-bottom: 30px;
+    }
+    
+    .card-service {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 -15px;
+    }
+    
+    .column-s {
+      flex: 33.33%;
+      padding: 0 15px;
+      margin-bottom: 30px;
+    }
+    
+    .card-s {
+      background: var(--light-bg);
+      padding: 30px 20px;
+      border-radius: 5px;
+      text-align: center;
+      height: 100%;
+      transition: transform 0.3s;
+      border-top: 4px solid var(--accent-color);
+    }
+    
+    .card-s:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+    
+    .card-s h3 {
+      color: var(--secondary-color);
+      margin: 15px 0;
+    }
+    
+    .card-s ul {
+      text-align: left;
+      padding-left: 20px;
+    }
+    
+    .card-s li {
+      margin-bottom: 8px;
+    }
+    
+    /* Contact Section */
+    .contact {
+      padding: 40px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      margin-bottom: 40px;
+    }
+    
+    .me h2 {
+      color: var(--secondary-color);
+      border-bottom: 2px solid var(--accent-color);
+      padding-bottom: 10px;
+      margin-bottom: 30px;
+    }
+    
+    .row-contact {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 -15px;
+    }
+    
+    .column1, .column2 {
+      flex: 50%;
+      padding: 0 15px;
+    }
+    
+    .card-column1, .card-column2 {
+      background: var(--light-bg);
+      padding: 30px;
+      border-radius: 5px;
+      height: 100%;
+    }
+    
+    .user, .address, .phone, .email {
+      display: flex;
+      align-items: center;
+      margin-bottom: 25px;
+    }
+    
+    .info {
+      margin-left: 15px;
+    }
+    
+    ._title {
+      font-weight: bold;
+      color: var(--secondary-color);
+    }
+    
+    form {
+      width: 100%;
+    }
+    
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+    
+    .btn input {
+      background: var(--accent-color);
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      cursor: pointer;
+      transition: background 0.3s;
+      width: auto;
+    }
+    
+    .btn input:hover {
+      background: var(--secondary-color);
+    }
+    
+    /* Footer */
+    footer {
+      background: var(--dark-bg);
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    
+    .connect ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      margin-bottom: 15px;
+    }
+    
+    .connect li {
+      margin: 0 10px;
+    }
+    
+    .connect a {
+      color: white;
+      transition: color 0.3s;
+    }
+    
+    .connect a:hover {
+      color: var(--accent-color);
+    }
+    
+    .foot_text a {
+      color: var(--accent-color);
+      text-decoration: none;
+    }
+    
+    /* Responsive Design */
+    @media screen and (max-width: 992px) {
+      .mynavbar {
+        width: 80px;
+      }
+      
+      .mynavbar a div {
+        display: none;
+      }
+      
+      .main {
+        margin-left: 80px;
+      }
+      
+      .column-s {
+        flex: 50%;
+      }
+    }
+    
+    @media screen and (max-width: 768px) {
+      .mynavbar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        padding-top: 20px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      
+      .mynavbar img {
+        width: 80px;
+        height: 80px;
+        margin: 0 10px 0 0;
+      }
+      
+      .mynavbar a {
+        padding: 10px;
+      }
+      
+      .main {
+        margin-left: 0;
+        padding-top: 120px;
+      }
+      
+      .column-skill-a, .column-skill-b,
+      .column1, .column2 {
+        flex: 100%;
+        margin-bottom: 20px;
+      }
+      
+      .column-s {
+        flex: 100%;
+      }
+      
+      .home {
+        min-height: auto;
+        padding: 60px 20px;
+      }
+      
+      .mytxt1 {
+        font-size: 2.5rem;
+      }
+    }
+    
+    @media screen and (max-width: 576px) {
+      .mynavbar a {
+        padding: 8px 5px;
+        font-size: 12px;
+      }
+      
+      .mynavbar a i {
+        font-size: 18px;
+      }
+      
+      .hello {
+        font-size: 2.5rem;
+      }
+      
+      .mytxt1 {
+        font-size: 2rem;
+      }
+      
+      .home p {
+        font-size: 1.2rem;
+      }
+      
+      .abt, .skills, .services, .contact {
+        padding: 20px;
+      }
+    }
+  </style>
 </head>
 <body>
   <!--Header Section-->
@@ -46,7 +539,7 @@
     <a href="#services" class="navbar">
     <i class="fa fa-wrench"></i>
     <div>SERVICES</div>
-    </a>-->
+    </a>
     <a href="#contact" class="navbar">
     <i class="fa fa-envelope"></i>
     <div>CONTACT</div>
@@ -56,11 +549,11 @@
   <!-- Navbar on small screens (Hidden on medium and large screens) -->
 <div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
   <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
-    <a href="#home" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>
-    <a href="#about" class="w3-bar-item w3-button" style="width:25% !important">ABOUT</a>
-    <a href="#skills" class="w3-bar-item w3-button" style="width:25% !important">SKILLS</a>
-    <!--<a href="#services" class="w3-bar-item w3-button" style="width:25% !important">SERVICES</a>-->
-    <a href="#contact" class="w3-bar-item w3-button" style="width:25% !important">CONTACT</a>
+    <a href="#home" class="w3-bar-item w3-button" style="width:20% !important">HOME</a>
+    <a href="#about" class="w3-bar-item w3-button" style="width:20% !important">ABOUT</a>
+    <a href="#skills" class="w3-bar-item w3-button" style="width:20% !important">SKILLS</a>
+    <a href="#services" class="w3-bar-item w3-button" style="width:20% !important">SERVICES</a>
+    <a href="#contact" class="w3-bar-item w3-button" style="width:20% !important">CONTACT</a>
   </div>
 </div>
   <!--end of nav section-->
@@ -124,23 +617,23 @@
           <div class="card-skill-a">
             <p>Computer maintainance & Troubleshooting</p>
             <div class="container">
-              <div class="skills comp">95%</div>
+              <div class="skills-bar comp">95%</div>
             </div>
             <p>HTML/CSS</p>
             <div class="container">
-              <div class="skills css">90%</div>
+              <div class="skills-bar css">90%</div>
             </div>
             <p>JavaScript</p>
             <div class="container">
-              <div class="skills js">50%</div>
+              <div class="skills-bar js">50%</div>
             </div>
             <p>Python/Frameworks/Libraries</p>
             <div class="container">
-              <div class="skills python">85%</div>
+              <div class="skills-bar python">85%</div>
             </div>
             <p>C</p>
             <div class="container">
-              <div class="skills c">60%</div>
+              <div class="skills-bar c">60%</div>
             </div>
           </div>
         </div>
@@ -148,23 +641,23 @@
           <div class="card-skill-b">
             <p>Servers & Backend Engineering</p>
             <div class="container">
-              <div class="skills server">85%</div>
+              <div class="skills-bar server">85%</div>
             </div>
             <p>Git & Version Control</p>
             <div class="container">
-              <div class="skills git">90%</div>
+              <div class="skills-bar git">90%</div>
             </div>
             <p>DataBases(mysql/mongodb)</p>
             <div class="container">
-              <div class="skills db">70%</div>
+              <div class="skills-bar db">70%</div>
             </div>
             <p>Illustrator</p>
             <div class="container">
-              <div class="skills illustrator">90%</div>
+              <div class="skills-bar illustrator">90%</div>
             </div>
             <p>PhotoShop</p>
             <div class="container">
-              <div class="skills photoshop">70%</div>
+              <div class="skills-bar photoshop">70%</div>
             </div>
           </div>
         </div>
